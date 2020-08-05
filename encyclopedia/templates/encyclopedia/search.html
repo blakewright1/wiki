@@ -1,0 +1,9 @@
+{% block body %}
+<h1>Search results for: {{search_text}}</h1>
+
+<ul>
+  {% for result in search_results %}
+  <a href="/{{result}}"><li>{{result}}</li></a>
+  {% endfor %}
+</ul>
+{% endblock %}
