@@ -1,5 +1,16 @@
+import datetime
+
 from django import forms
+from django.core.exceptions import ValidationError
+from django.utils.translation import ugettext_lazy as _
 
 
-class NameForm(forms.Form):
-    your_name = forms.CharField(label='Your name', max_length=100)
+class EditForm(forms.Form):
+    edited_page = forms.CharField(
+        widget=forms.Textarea(attrs={"rows": 5, "cols": 20}), initial='test text')
+
+
+class CreateForm(forms.Form):
+    created_title = forms.CharField()
+    created_page = forms.CharField(
+        widget=forms.Textarea(attrs={"rows": 5, "cols": 20}), initial='test text')

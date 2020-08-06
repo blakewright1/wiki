@@ -8,5 +8,9 @@
   </head>
   <body>
     {{ entry|markdown }}
+
+    <form action="{% url 'edit' name %}">
+      <input type="submit" value="Edit" />
+    </form>
   </body>
 </html>
