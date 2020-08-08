@@ -3,13 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Create a Page</title>
+    <style>
+      .errorlist {
+        visibility: hidden;
+      }
+
+      form {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        width: 50%;
+      }
+
+      .submit-btn {
+        width: 50%;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello Create</h1>
+    <h1>Create a New Page</h1>
     <form action="{% url 'create' %}" method="post">
       {% csrf_token %} {{ form }}
-      <input type="submit" value="Submit" />
+      <br />
+      <input class="submit-btn" type="submit" value="Submit" />
     </form>
   </body>
 </html>
