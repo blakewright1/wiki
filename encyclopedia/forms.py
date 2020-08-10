@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class EditForm(forms.Form):
     edited_page = forms.CharField(
-        widget=forms.Textarea(attrs={"rows": 5, "cols": 20, "value": 'edits here'}), initial='test text')
+        widget=forms.Textarea(attrs={"rows": 15, "cols": 100, "value": 'edits here'}), initial='test text')
 
 
 class CreateForm(forms.Form):
